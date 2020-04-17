@@ -13,11 +13,13 @@ struct ContentView: View {
     
   @Environment(\.managedObjectContext) var moc
   
-    @State private var lastNameFilter = ""
+    @State private var lastNameFilter = "E"
     
     var body: some View {
         VStack {
-            FilteredList(filter: lastNameFilter)
+            FilteredList(filterKey: "firstName", filterValue: lastNameFilter) { (singer: Singer)  in
+                Text("\(singer.wrappedFirstName) \(singer.wrappedLastName)")
+            }
             
             Button("Add Examples") {
                 let taylor = Singer(context: self.moc)
@@ -32,15 +34,19 @@ struct ContentView: View {
                 adele.firstName = "Adele"
                 adele.lastName = "Adkins"
                 
-                try? self.moc.save()
+                do {
+                    try self.moc.save()
+                } catch {
+                    print(error.localizedDescription)
+                }
             }
             
             Button("Show A") {
                 self.lastNameFilter = "A"
             }
             
-            Button("Show S") {
-                self.lastNameFilter = "S"
+            Button("Show E") {
+                self.lastNameFilter = "E"
             }
         }
      }
