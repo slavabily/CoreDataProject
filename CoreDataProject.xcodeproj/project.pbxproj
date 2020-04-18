@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		B90F66C024498C11003C15A4 /* FilteredList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90F66BF24498C11003C15A4 /* FilteredList.swift */; };
+		B981ADB8244ADD080066B7AB /* Candy+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B981ADB4244ADD080066B7AB /* Candy+CoreDataClass.swift */; };
+		B981ADB9244ADD080066B7AB /* Candy+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B981ADB5244ADD080066B7AB /* Candy+CoreDataProperties.swift */; };
+		B981ADBA244ADD080066B7AB /* Country+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B981ADB6244ADD080066B7AB /* Country+CoreDataClass.swift */; };
+		B981ADBB244ADD080066B7AB /* Country+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B981ADB7244ADD080066B7AB /* Country+CoreDataProperties.swift */; };
 		B993CAA824479A1800C0F64C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993CAA724479A1800C0F64C /* AppDelegate.swift */; };
 		B993CAAA24479A1800C0F64C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B993CAA924479A1800C0F64C /* SceneDelegate.swift */; };
 		B993CAAD24479A1800C0F64C /* CoreDataProject.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B993CAAB24479A1800C0F64C /* CoreDataProject.xcdatamodeld */; };
@@ -21,6 +25,10 @@
 
 /* Begin PBXFileReference section */
 		B90F66BF24498C11003C15A4 /* FilteredList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredList.swift; sourceTree = "<group>"; };
+		B981ADB4244ADD080066B7AB /* Candy+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Candy+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		B981ADB5244ADD080066B7AB /* Candy+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Candy+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		B981ADB6244ADD080066B7AB /* Country+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		B981ADB7244ADD080066B7AB /* Country+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Country+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		B993CAA424479A1800C0F64C /* CoreDataProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B993CAA724479A1800C0F64C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B993CAA924479A1800C0F64C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +72,10 @@
 		B993CAA624479A1800C0F64C /* CoreDataProject */ = {
 			isa = PBXGroup;
 			children = (
+				B981ADB4244ADD080066B7AB /* Candy+CoreDataClass.swift */,
+				B981ADB5244ADD080066B7AB /* Candy+CoreDataProperties.swift */,
+				B981ADB6244ADD080066B7AB /* Country+CoreDataClass.swift */,
+				B981ADB7244ADD080066B7AB /* Country+CoreDataProperties.swift */,
 				B99A7A0A2449788C000DAD48 /* Singer+CoreDataClass.swift */,
 				B99A7A0B2449788C000DAD48 /* Singer+CoreDataProperties.swift */,
 				B993CAA724479A1800C0F64C /* AppDelegate.swift */,
@@ -164,7 +176,11 @@
 				B99A7A0C2449788C000DAD48 /* Singer+CoreDataClass.swift in Sources */,
 				B993CAAF24479A1800C0F64C /* ContentView.swift in Sources */,
 				B993CAAD24479A1800C0F64C /* CoreDataProject.xcdatamodeld in Sources */,
+				B981ADBB244ADD080066B7AB /* Country+CoreDataProperties.swift in Sources */,
+				B981ADB9244ADD080066B7AB /* Candy+CoreDataProperties.swift in Sources */,
 				B90F66C024498C11003C15A4 /* FilteredList.swift in Sources */,
+				B981ADBA244ADD080066B7AB /* Country+CoreDataClass.swift in Sources */,
+				B981ADB8244ADD080066B7AB /* Candy+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
