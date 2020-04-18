@@ -13,7 +13,7 @@ struct ContentView: View {
     
     @Environment(\.managedObjectContext) var moc
     
-    @FetchRequest(entity: Country.entity(), sortDescriptors: []) var countries: FetchedResults<Country>
+    @FetchRequest(entity: Country.entity(), sortDescriptors: [NSSortDescriptor(keyPath: \Country.fullName, ascending: true), NSSortDescriptor(keyPath: \Country.shortName, ascending: false)]) var countries: FetchedResults<Country>
     
     var body: some View {
         VStack {
