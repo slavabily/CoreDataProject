@@ -12,20 +12,24 @@ import CoreData
 struct FilteredList<T: NSManagedObject, Content: View>: View {
     
     var fetchRequest: FetchRequest<T>
-    var singers: FetchedResults<T> {
+    var subjects: FetchedResults<T> {
         fetchRequest.wrappedValue
     }
-    
     let content: (T) -> Content
     
-    init(filterKey: String, filterValue: String, @ViewBuilder content: @escaping (T) -> Content) {
+    enum Predicate: String {
+        case didBeginsWith = "%K BEGINSWITH %@"
+    }
+    
+    init(format: Predicate, filterKey: String, filterValue: String, sortDescriptors: [NSSortDescriptor], @ViewBuilder content: @escaping (T) -> Content) {
+        
         fetchRequest =
-            FetchRequest<T>(entity: T.entity(), sortDescriptors: [], predicate: NSPredicate(format: "%K BEGINSWITH %@", filterKey, filterValue))
+            FetchRequest<T>(entity: T.entity(), sortDescriptors: [], predicate: NSPredicate(format: format.rawValue, filterKey, filterValue))
         self.content = content
     }
     
     var body: some View {
-        List(fetchRequest.wrappedValue, id: \.self) { singer in
+        List(subjects, id: \.self) { singer in
             self.content(singer)
         }
     }

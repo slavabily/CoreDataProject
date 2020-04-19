@@ -26,6 +26,7 @@ struct ContentView: View {
                     }
                  }
             }
+            
             Button("Add") {
                 let candy1 = Candy(context: self.moc)
                 candy1.name = "Mars"
